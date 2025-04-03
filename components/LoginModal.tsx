@@ -2,11 +2,16 @@ import { useState } from "react"
 import { Input } from "./ui/input"
 import { Button } from "./ui/moving-border"
 
-export function LoginModal({ onClose, onLogin }) {
+interface LoginModalProps {
+  onClose: () => void;
+  onLogin: (user: { email: string; name: string }) => void;
+}
+
+export function LoginModal({ onClose, onLogin }: LoginModalProps) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
     // Here you would typically send a request to your backend for authentication
     // For this example, we'll just simulate a successful login
