@@ -16,9 +16,9 @@ export default function SignupFormDemo() {
   };
   return (
     <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
-      <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+      <h1 className=" text-center text-xl font-bold text-neutral-800 dark:text-neutral-200">
         Welcome to Movieblaze
-      </h2>
+      </h1>
       <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
         Login to Movieblaze if you can because we don&apos;t have a login flow
         yet
@@ -32,12 +32,12 @@ export default function SignupFormDemo() {
           </LabelInputContainer>
           <LabelInputContainer>
             <Label className="text-white" htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" placeholder="Rake" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label className="text-white" htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input id="email" placeholder="themovieblaze@gmail.com" type="email" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label className="text-white" htmlFor="password">Password</Label>
