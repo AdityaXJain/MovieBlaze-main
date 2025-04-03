@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>MovieBlaze - Discover Your Next Favorite Movie</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-brand">
+          <i class="fas fa-film"></i>
+          <a href="/">MovieBlaze</a>
+        </div>
+        <form id="form">
+          <div class="search-container">
+            <input type="text" placeholder="Search for movies..." id="search" class="search" />
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <div class="nav-links">
+          <a href="#" class="nav-link" data-section="popular">Popular</a>
+          <a href="#" class="nav-link" data-section="top-rated">Top Rated</a>
+          <a href="#" class="nav-link" data-section="upcoming">Upcoming</a>
+          <a href="#" class="nav-link" id="auth-link">Login/Signup</a>
+          <a href="#" class="nav-link" id="watchlist-link">Watchlist</a>
+          <a href="#" class="nav-link" id="favorites-link">Favorites</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main"></main>
+
+    <div id="auth-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login/Signup</h2>
+        <form id="auth-form">
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit">Submit</button>
+        </form>
+        <p id="auth-message"></p>
+      </div>
+    </div>
+
+    <div id="user-profile" class="hidden">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <div id="movie-details" class="hidden">
+      <h2 id="movie-title"></h2>
+      <div id="movie-info"></div>
+      <div id="user-actions">
+        <button id="add-to-watchlist">Add to Watchlist</button>
+        <button id="mark-as-favorite">Mark as Favorite</button>
+      </div>
+      <div id="review-section">
+        <h3>Reviews</h3>
+        <form id="review-form">
+          <textarea id="review-text" placeholder="Write your review"></textarea>
+          <select id="rating">
+            <option value="">Select rating</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
+          <button type="submit">Submit Review</button>
+        </form>
+        <div id="reviews-list"></div>
+      </div>
+    </div>
+
+    <div id="recommendations" class="hidden">
+      <h2>Recommended for You</h2>
+      <div id="recommendations-list"></div>
+    </div>
+
+    <button id="theme-toggle">Toggle Dark Mode</button>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About MovieBlaze</h3>
+          <p>Discover and explore the world of cinema with MovieBlaze - your ultimate movie companion.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Popular Movies</a></li>
+            <li><a href="#">Top Rated</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://github.com/AdityaXJain/Movie-Blaze"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 MovieBlaze. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
