@@ -10,13 +10,13 @@ export function NavBar() {
         </Link>
         <SearchBar />
         <div className="flex space-x-4">
-          <Link href="/popular" className="hover:text-accent transition duration-300">
+          <Link href="/popular" className="hover:text-accent transition duration-300 text-gray-100">
             Popular
           </Link>
-          <Link href="/top-rated" className="hover:text-accent transition duration-300">
+          <Link href="/top-rated" className="hover:text-accent transition duration-300 text-gray-100">
             Top Rated
           </Link>
-          <Link href="/upcoming" className="hover:text-accent transition duration-300">
+          <Link href="/upcoming" className="hover:text-accent transition duration-300 text-gray-100">
             Upcoming
           </Link>
           <Link href="/upcoming" className="hover:text-accent transition duration-300">
