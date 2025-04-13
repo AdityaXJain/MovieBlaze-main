@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MovieFeedback from "./MovieFeedback";
 
 const API_KEY = "3fd2be6f0c70a2a598f084ddfb75487c";
 
@@ -13,6 +14,7 @@ async function getMovieDetails(id: string) {
   return res.json();
 }
 
+// Server component for the page
 export default async function MoviePage({ params }: { params: { id: string } }) {
   const movie = await getMovieDetails(params.id);
   const trailer = movie.videos.results.find(
@@ -51,7 +53,6 @@ export default async function MoviePage({ params }: { params: { id: string } }) 
             <div>
               <p className="font-semibold text-primary">Genres:</p>
               <p>{movie.genres.map((g: { name: string }) => g.name).join(', ')}</p>
-
             </div>
           </div>
           {trailer && (
@@ -83,7 +84,8 @@ export default async function MoviePage({ params }: { params: { id: string } }) 
               </div>
             </div>
           )}
-          <Link href="/" className="text-secondary hover:text-accent transition duration-300">
+          <MovieFeedback movieId={params.id} />
+          <Link href="/" className="inline-block mt-6 text-secondary hover:text-accent transition duration-300">
             &larr; Back to Home
           </Link>
         </div>
